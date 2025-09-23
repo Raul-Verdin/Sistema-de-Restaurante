@@ -1,0 +1,95 @@
+/* Paleta de colores exclusiva para la página del Menú */
+:root {
+    --color-primario: #FF6347; /* Rojo tomate */
+    --color-acento: #FFD700;
+    --color-texto: #333;
+    --color-fondo: #FFF8E1;
+    --color-superficie: #FFFFFF;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.main-content {
+    max-width: 700px;
+    padding: 40px;
+    background-color: var(--color-superficie);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px var(--color-sombra);
+    margin: 20px;
+    text-align: center;
+}
+
+/* Título principal */
+.main-content h1 {
+    text-align: center;
+    color: var(--color-primario);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 10px;
+}
+
+/* Subtítulos de las secciones */
+.main-content h2 {
+    color: var(--color-primario);
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Lista de platos */
+.main-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-content ul li {
+    font-size: 1.2rem;
+    background-color: #FAF3DD;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content ul li:hover {
+    background-color: #FFDAB9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .main-content ul li {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

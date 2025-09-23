@@ -1,0 +1,93 @@
+/* Paleta de colores exclusiva para la página de Inicio */
+:root {
+    --color-primario: #28A745; 
+    --color-acento: #FFD700; /* Amarillo dorado */
+    --color-texto: #343a40; /* Gris oscuro */
+    --color-fondo: #FAF5EF; /* Fondo claro */
+    --color-boton: #58c087; /* Verde botón */
+    --color-boton-hover: #3e7558; /* Verde oscuro */
+    --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.main-content {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px var(--color-sombra);
+    text-align: center;
+    margin: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Título principal */
+.main-content h1 {
+    color: var(--color-primario);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--color-acento);
+    padding-bottom: 10px;
+}
+
+/* Texto de bienvenida */
+.main-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botón de reserva */
+.main-content button {
+    background-color: var(--color-boton);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-content button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 30px 20px;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+
+    .main-content button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}

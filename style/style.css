@@ -1,0 +1,128 @@
+/* Paleta de colores */
+:root {
+    --color-primario: #28A745;
+    --color-contraste: #FFD700;
+    --color-texto: #4A4A4A;
+    --color-superficie: #F8F8F8;
+    --color-fondo: #F4F1E4;
+    --color-destructivo: #DC3545;
+    --color-exito: #66BB6A;
+    --color-alerta: #FFC107;
+}
+
+/* Estilos generales */
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+}
+
+/* Barra de navegación lateral */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-primario);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 5px solid var(--color-contraste);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: var(--color-superficie);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: var(--color-contraste);
+    color: #000;
+}
+
+/* Contenido Principal */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: var(--color-superficie);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    color: var(--color-primario);
+    margin-bottom: 30px;
+}
+
+.about-us {
+    line-height: 1.6;
+}
+
+.about-us h2 {
+    color: var(--color-primario);
+    margin-top: 20px;
+}
+
+.about-us ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.about-us ul li {
+    margin-bottom: 10px;
+}
+
+/* Botones y formularios */
+form button {
+    background-color: var(--color-exito);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #58c087;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-content {
+        margin: 10px;
+        padding: 20px;
+    }
+}

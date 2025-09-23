@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - El Nopalito</title>
+    <link rel="icon" type="image/x-icon" href="logo/favicon.ico">
+    <link rel="stylesheet" href="style/style.css"> <!-- CSS general -->
+    <link rel="stylesheet" href="style/contacto.css"> <!-- CSS exclusivo para esta página -->
+</head>
+<body>
+    <!-- Barra de navegación lateral -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="logo/logo.png" alt="Logo del Restaurante" class="logo">
+            <h2>El Nopalito</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="index.html">Reservar</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <h1>Contáctanos</h1>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

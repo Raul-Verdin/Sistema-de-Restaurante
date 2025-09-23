@@ -1,0 +1,115 @@
+/* Colores y variables */
+:root {
+    --color-primario: #28A745; 
+    --color-secundario: #FFD700; /* Amarillo dorado */
+    --color-boton: #58c087; /* Verde */
+    --color-boton-hover: #3e7558; /* Verde oscuro */
+    --color-texto: #343a40; /* Gris oscuro */
+    --color-fondo: #FAF5EF; /* Fondo claro */
+    --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor Principal */
+.main-content {
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px var(--color-sombra);
+    margin: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado */
+header h1 {
+    text-align: center;
+    color: var(--color-primario);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--color-secundario);
+    padding-bottom: 10px;
+}
+
+/* Estilos del formulario de reserva */
+.reservation-form {
+    margin-top: 30px;
+}
+
+.reservation-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-primario);
+}
+
+.reservation-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form label {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px var(--color-sombra);
+}
+
+.reservation-form textarea {
+    resize: none;
+}
+
+.reservation-form button {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--color-boton);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .reservation-form button {
+        font-size: 1rem;
+    }
+}
